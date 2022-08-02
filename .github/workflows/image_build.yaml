@@ -67,7 +67,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ https://transfer.sh }}
           asset_path: ./${{ env.FILE_SHA1 }}
           asset_name: ${{ env.FILE_SHA1 }}
           asset_content_type: text/plain
@@ -77,7 +76,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ https://transfer.sh }}
           asset_path: ./${{ env.FILE_PKG }}
           asset_name: ${{ env.FILE_PKG }}
           asset_content_type: text/plain
