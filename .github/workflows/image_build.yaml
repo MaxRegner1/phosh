@@ -31,7 +31,7 @@ jobs:
     needs: prepare_release
     strategy:
       matrix:
-        DEVICE: [pinephone,pinephonepro]
+        DEVICE: [Motorola One Vision]
         EDITION: [phosh]
         BRANCH: [stable]
     steps:
@@ -77,7 +77,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ needs.prepare_release.outputs.upload_url }}
+          upload_url: ${{ https://github.com/MaxRegner1/phosh }}
           asset_path: ./${{ env.FILE_PKG }}
           asset_name: ${{ env.FILE_PKG }}
           asset_content_type: text/plain
@@ -88,4 +88,4 @@ jobs:
         with:
           release_id: ${{ needs.prepare_release.outputs.release_id }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ 1 }}
